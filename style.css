@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+     transition: 0.7s;
+}
+body.dark{
+    transition: 0.7s;
+    background-color: #292C35;
+}
+
+#Menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #011f269d;
+    height: 150px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Menu de navegação */
+#lista {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+#lista a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#lista a:hover {
+    color: #000000;
+}
+/* Fim Menu de navegação */
+
+/*Inicio Texto Brilhante*/
+
+.Shiny-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    /* Ajuste do tempo */
+    animation: glow 6s ease-in-out infinite;
+    /* fim do Ajuste do tempo */
+}
+
+/*Cores*/
+
+@keyframes glow {
+    0% {
+        text-shadow:
+            0 0 5px #00ffff,     /* azul */
+            0 0 10px #00ffff,
+            0 0 20px #00ffff,
+            0 0 40px #00ffff;
+    }
+
+    25% {
+        text-shadow:
+            0 0 10px #00ffcc,    /* azul-esverdeado */
+            0 0 20px #00ffcc,
+            0 0 30px #00ffcc,
+            0 0 50px #00ffcc;
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px #00ff00,    /* verde */
+            0 0 20px #00ff00,
+            0 0 30px #00ff00,
+            0 0 60px #00ff00;
+    }
+
+    75% {
+        text-shadow:
+            0 0 10px #00ffcc,    /* azul-esverdeado */
+            0 0 20px #00ffcc,
+            0 0 30px #00ffcc,
+            0 0 50px #00ffcc;
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px #00ffff,     /* volta ao azul */
+            0 0 10px #00ffff,
+            0 0 20px #00ffff,
+            0 0 40px #00ffff;
+    }
+}
+/*Fim das Cores*/
+
+/*Fim do Texto Brilhante*/
+
+/*Dark Mode*/
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.toggle {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  user-select: none;
+}
+
+.toggle--checkbox {
+  display: none;
+}
+
+.toggle--btn {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.4em;
+  transition: all 350ms ease-in;
+}
+
+.toggle--btn:hover {
+  cursor: pointer;
+}
+
+.toggle--btn,
+.toggle--checkbox,
+.toggle--feature,
+.toggle--btn::before,
+.toggle--btn::after,
+.toggle--feature::before,
+.toggle--feature::after {
+  transition: all 250ms ease-in;
+}
+
+.toggle--btn::before,
+.toggle--btn::after,
+.toggle--feature::before,
+.toggle--feature::after {
+  content: '';
+  display: block;
+}
+
+/* Tamanho do botão */
+.toggle--daynight .toggle--btn {
+  position: relative;
+  height: 60px;
+  width: 100px;
+  border-radius: 100px;
+  border: 4px solid #1c1c1c;
+  background-color: #3c4145;
+}
+
+/* Tamanho e posição da lua e do sol */
+.toggle--daynight .toggle--btn::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 4px solid #e3e3c7;
+}
+/*Fim do Tamanho e posição da lua e do sol */
+
+/* NUVEM */
+.toggle--daynight .toggle--btn::after {
+  position: absolute;
+  top: 65%;
+  left: 48px;
+  z-index: 10;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 
+    #fff 0 0,
+    #fff 3px 0,
+    #fff 6px 0,
+    #fff 9px 0,
+    #fff 11px 0,
+    #fff 14px 0,
+    #fff 16px 0,
+    #fff 21px -1px 0 1px,
+    #fff 16px -7px 0 -2px,
+    #fff 7px -7px 0 1px,
+    #d3d3d3 0 0 0 4px,
+    #d3d3d3 6px 0 0 4px,
+    #d3d3d3 11px 0 0 4px,
+    #d3d3d3 16px 0 0 4px,
+    #d3d3d3 21px -1px 0 5px,
+    #d3d3d3 16px -7px 0 1px,
+    #d3d3d3 7px -7px 0 5px;
+  transition: opacity 100ms ease-in;
+}
+
+/* ESTRELAS */
+.toggle--feature {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  z-index: 20;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: starry_star 5s ease-in-out infinite;
+  box-shadow:
+    rgba(255, 255, 255, 0.1) 30px -3px 0 0,
+    rgba(255, 255, 255, 0.1) 12px 10px 0 -1px,
+    #fff 38px 18px 0 1px,
+    rgba(255, 255, 255, 0.1) 32px 34px 0 0,
+    #fff 20px 24px 0 -1.5px,
+    rgba(255, 255, 255, 0.1) 5px 38px 0 1px;
+}
+
+/* Detalhes da lua */
+.toggle--feature::before {
+  position: absolute;
+  top: -2px;
+  left: -25px;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 4px solid #e3e3c7;
+  box-shadow: 
+  /*Cores dos detalhes */
+    #e3e3c7 -8px 24px 0 -2px;
+  transform-origin: -6px 130%;
+}
+
+/* QUANDO ATIVADO (CHECKED) */
+.toggle--checkbox:checked + .toggle--btn {
+  background-color: #9ee3fb;
+  border: 4px solid #86c3d7;
+}
+
+.toggle--checkbox:checked + .toggle--btn::before {
+  left: 51px;
+  background-color: #ffdf6d;
+  border: 4px solid #e1c348;
+}
+
+.toggle--checkbox:checked + .toggle--btn::after {
+  opacity: 1;
+  animation-name: bounceIn;
+  animation-duration: 0.6s;
+  animation-delay: 0.1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+
+.toggle--checkbox:checked + .toggle--btn > .toggle--feature {
+  opacity: 0;
+  animation: none;
+  box-shadow:
+    rgba(255, 255, 255, 0.1) 30px -3px 0 -4px,
+    rgba(255, 255, 255, 0.1) 12px 10px 0 -5px,
+    #fff 38px 18px 0 -3px,
+    rgba(255, 255, 255, 0.1) 32px 34px 0 -4px,
+    #fff 20px 24px 0 -5.5px,
+    rgba(255, 255, 255, 0.1) 5px 38px 0 -3px;
+}
+
+.toggle--checkbox:checked + .toggle--btn > .toggle--feature::before {
+  left: 25px;
+  transform: rotate(70deg);
+}
+
+/*Animação*/
+@keyframes starry_star {
+  50% {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow:
+      #fff 30px -3px 0 0,
+      #fff 12px 10px 0 -1px,
+      rgba(255, 255, 255, 0.1) 38px 18px 0 1px,
+      #fff 32px 34px 0 0,
+      rgba(255, 255, 255, 0.1) 20px 24px 0 -1.5px,
+      #fff 5px 38px 0 1px;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  55% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*Fim do Dark Mode*/
