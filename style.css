@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    background-color: #ffffff;
+    background-color: #292C35;
     font-family: Arial, sans-serif;
      transition: 0.7s;
 }
 body.dark{
     transition: 0.7s;
-    background-color: #292C35;
+    background-color: #ffffff;
 }
 
 #Menu {
@@ -18,6 +18,18 @@ body.dark{
     height: 150px;
     width: 100%;
     box-sizing: border-box;
+     
+ 
+
+/*  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.4s ease;
+  z-index: 1000; 
+  */
+ 
 }
 
 /* Menu de navegação */
@@ -315,4 +327,328 @@ body.dark{
     transform: scale(1);
   }
 }
+
+/* === Dark MODE NO MODAL === */
+body.dark .conteudoModal {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+body.dark .w3-container.w3-blue {
+  background-color: #000000;
+  border-bottom: 2px solid #555;
+}
+
+body.dark .tablink {
+  background-color: #2c2c2c !important;
+  color: #ffffff !important;
+}
+
+body.dark .tablink:hover,
+body.dark .tablink.w3-light-grey {
+  background-color: #444 !important;
+  color: #00ffff !important;
+}
+
+body.dark .w3-button.w3-black {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .w3-button.w3-black:hover {
+  background-color: #555;
+}
+
+body.dark .imagem-lateral {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+body.dark .w3-display-topright:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .w3-button.w3-white {
+  background-color: #222;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark .w3-button.w3-white:hover {
+  background-color: #333;
+  border-color: #555;
+}
+
+body.dark .auto-type{
+    color: rgb(0, 0, 0);
+  }
 /*Fim do Dark Mode*/
+
+
+ /* === INICIO DO MODAL === */
+ .city {
+      display: none;
+    }
+      /*botão do modal*/
+    .w3-button.w3-black {
+   position: relative;
+  width: 100%;
+  height: 80vh;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  background-image: url('FotoColegioC.jpg'); /* imagem de fundo principal */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  overflow: hidden; /* impede que a imagem sobreposta ultrapasse os limites */
+  text-align: center;
+  z-index: 1;
+    }
+
+   /* Efeito ao passar o mouse */
+.w3-button.w3-black:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* sobreposição escura */
+}
+
+  /* Texto no centro com fundo escuro levemente transparente */
+.w3-button.w3-black span {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+/* Imagem sobreposta aparece no hover */
+.w3-button.w3-black::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://miro.medium.com/v2/resize:fit:2048/0*D4c3Wot2boeghGqI.gif'); /* substitua pelo nome da imagem sobreposta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.w3-button.w3-black:hover::after {
+  opacity: 1;
+}
+      /*Fim do botão*/
+
+    /*modal*/
+    .w3-modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+        /*Fundo do modal*/
+    .conteudoModal {
+      background-color: #1c1c1c;
+      color: #ffffff;
+      margin: 5% auto;
+      border-radius: 8px;
+      max-width: 900px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      animation: zoom 0.3s;
+    }
+     /*Fim do Fundo do modal*/
+    
+    /*Efeito do Modal com um Zoom*/
+     @keyframes zoom {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    /*Efeito do Modal com um Zoom*/
+    
+    /*Aba Preta*/
+    .w3-container.w3-blue {
+      background: #000000;
+      color: white;
+      padding: 20px;
+      border-bottom: 2px solid #1976d2;
+      position: relative;
+    }
+    /* Fim Aba Preta*/
+
+    .w3-container.w3-blue h2 {
+      margin: 0;
+    }
+
+    /* Cor do texto não selecionado*/
+    .w3-bar .tablink {
+      background-color: #e3f2fd;
+      color: #000000;
+      font-weight: bold;
+      transition: 0.2s;
+      border: none;
+      border-radius: 10px;
+    }
+    /* Fim da Cor do texto não selecionado*/
+    .w3-bar .tablink:hover {
+      background-color: #67a6da;
+    }
+
+    .w3-bar .tablink.w3-light-grey {
+      background-color: #bbdefb !important;
+      color: #0d47a1;
+    }
+
+    .w3-container.city {
+      padding: 20px;
+      animation: fadeEffect 0.4s;
+    }
+
+    @keyframes fadeEffect {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+ 
+
+    .w3-button.w3-white {
+      transition: 0.2s;
+    }
+
+    .w3-button.w3-white:hover {
+      background-color: #ddd;
+      border-color: #aaa;
+    }
+
+ 
+
+    .w3-display-top {
+    font-size: 28px;
+    padding: 10px 16px;
+    cursor: pointer;
+    top: 10px;
+    right: 16px;
+}
+
+    .w3-display-topright:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* === IMAGEM COMO MOLDURA === */
+    .conteudo-london {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .imagem-lateral {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid black;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
+
+    .texto-london {
+      flex: 1;
+    }
+  .auto-type{
+    color: white;
+  }
+    /* === RESPONSIVIDADE === */
+    @media (max-width: 768px) {
+      .conteudo-london {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .imagem-lateral {
+        margin-bottom: 20px;
+      }
+
+        .w3-button.w3-black {
+    height: 60vh;
+    font-size: 20px;
+  }
+
+  .w3-button.w3-black span {
+    padding: 15px 30px;
+  }
+    }
+        /* Cards */
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.card {
+  background: linear-gradient(to bottom, #fffc61, #933333);
+  color: #000;
+  width: 380px;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.card .icon-area {
+  margin-bottom: 20px;
+}
+
+/* Tamanho do Svg */
+.card .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+/* Dark Mode */
+body:not(.dark-mode) .card:hover {
+  filter: brightness(115%);
+  cursor: pointer;
+}
+
+body.dark-mode .card {
+  background: linear-gradient(to bottom, #444, #111);
+  color: #fff;
+}
+
+body.dark-mode .card:hover {
+  filter: brightness(85%);
+}
+/* fim do Card */
