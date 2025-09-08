@@ -693,7 +693,7 @@ body.dark .w3-button.w3-black::after {
   .auto-type{
     color: white;
   }
-    /* === RESPONSIVIDADE === */
+    /* RESPONSIVIDADE */
     @media (max-width: 768px) {
       .conteudo-london {
         flex-direction: column;

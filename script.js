@@ -131,3 +131,44 @@ document.getElementById('GoSaibaMais').addEventListener('click', function(event)
 });
 
 
+  /* Codigo do Hamburguer */
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+const toggleDark = document.getElementById('toggle--daynight');
+
+hamburgerBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  hamburgerBtn.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+document.addEventListener('click', (e) => {
+  if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+    hamburgerBtn.classList.remove('active');
+    navMenu.classList.remove('active');
+  }
+});
+
+toggleDark.addEventListener('change', () => {
+  document.body.classList.toggle('dark', toggleDark.checked);
+});
+
+  /* Codigo do Hamburguer */
+  /*  Codigo Modal Seção 4 */
+  function abrirAba(id) {
+  const abas = document.querySelectorAll('.conteudo-aba');
+  abas.forEach(aba => aba.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+
+function ampliarImagem(img) {
+  const overlay = document.getElementById("overlayImagem");
+  const imgAmpliada = document.getElementById("imagemAmpliada");
+  imgAmpliada.src = img.src;
+  overlay.style.display = "flex";
+}
+
+function fecharImagemAmpliada() {
+  document.getElementById("overlayImagem").style.display = "none";
+}
+  /*  Codigo Modal Seção 4 */

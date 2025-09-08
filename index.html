@@ -232,47 +232,56 @@
     </div>
 
     <div id="ambcom" class="conteudo-aba">
-      <h3>AmbCom</h3>
+      <h3>Ambientes Computacionais</h3>
       <ul>
-        <li>Conhecimento avançado sobre manutenção de computadores.</li>
-        <li>Domínio intermediário das ferramentas Google (Workspace).</li>
-        <li>Conhecimento em Linux (linha de comando e sistema).</li>
+        <li>Domínio avançado sobre manutenção de computadores.</li>
+        <li>Desenvolvimento de Competências Digitais </li>
+        <li>Domínio das ferramentas Google Workspace (Planilhas, Docs).</li>
+        <li>Conhecimento Basico em Linux (linha de Comandos, Servidor vsftpd).</li>
+        <li>Desenvolvimento de habilidades em Arquitetura de Redes.</li>
+        <li>Conhecimento Técnico sobre Redes (Cabeamento estruturado, Circuitos e Grandezas Eletricas)</li>
       </ul>
       <div class="imagens-habilidades">
-        <img src="URL_DA_IMAGEM_1" onclick="ampliarImagem(this)">
-        <img src="URL_DA_IMAGEM_2" onclick="ampliarImagem(this)">
+        <img src="Manutenção.webp" onclick="ampliarImagem(this)">
+        <img src="CertificadoDigitalAwareness.png" onclick="ampliarImagem(this)">
+        <img src="Planilhas.png" onclick="ampliarImagem(this)">
+        <img src="ServidorUbuntu.png" onclick="ampliarImagem(this)">
+        <img src="Rack1.png" onclick="ampliarImagem(this)">
+        <img src="Rack2-Medida.png" onclick="ampliarImagem(this)">
+        <img src="Packet-Tracer-Logic.png" onclick="ampliarImagem(this)">
       </div>
     </div>
 
     <div id="frontend" class="conteudo-aba" style="display:none;">
       <h3>Front-End</h3>
       <ul>
-        <li>HTML5, CSS3, Flexbox e Grid</li>
-        <li>JavaScript e manipulação de DOM</li>
-        <li>Responsividade e design acessível</li>
+        <li>Desenvolvi boas praticas com HTML5, CSS3, Flexbox e Grid</li>
+        <li>Conhecimento de JavaScript e manipulação de DOM</li>
+        <li>Dominio em Responsividade e design acessível</li>
       </ul>
       <div class="imagens-habilidades">
-        <img src="URL_DA_IMAGEM_3" onclick="ampliarImagem(this)">
-        <img src="URL_DA_IMAGEM_4" onclick="ampliarImagem(this)">
+        <img src="Html Flex.png" onclick="ampliarImagem(this)">
+        <img src="Html,Css e Javascript.png" onclick="ampliarImagem(this)">
+        <img src="JavascriptCadastro.png" onclick="ampliarImagem(this)">
+        <img src="Responsividade.png" onclick="ampliarImagem(this)">
       </div>
     </div>
 
     <div id="backend" class="conteudo-aba" style="display:none;">
       <h3>Back-End</h3>
       <ul>
-        <li>Conhecimentos iniciais em C#, .NET e APIs</li>
-        <li>Versionamento com Git/GitHub</li>
-        <li>Boas práticas de lógica de programação</li>
+        <li>Conhecimentos intermediarios sobre C#, APIs, GRUD e .NET</li>
+        <li>Desenvolvi boas práticas de lógica de programação</li>
       </ul>
       <div class="imagens-habilidades">
-        <img src="CertificadoBasicoCienciasdeDadosCisco.png" onclick="ampliarImagem(this)">
-        <img src="CertificadoDefesadeRedeCisco.png" onclick="ampliarImagem(this)">
+        <img src="API.png" onclick="ampliarImagem(this)">
+        <img src="DDD.png" onclick="ampliarImagem(this)">
       </div>
     </div>
   </div>
 </div>
 
-<!-- ============ Imagem Ampliada (Overlay) ============= -->
+<!-- Imagem Ampliada -->
 <div id="overlayImagem" class="overlay" onclick="fecharImagemAmpliada()">
   <img id="imagemAmpliada">
 </div>
@@ -296,28 +305,6 @@
  <!-- Fim do Rodapé-->
 
 <script src="script.js"> </script>
-<script>
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const navMenu = document.getElementById('nav-menu');
-const toggleDark = document.getElementById('toggle--daynight');
-
-hamburgerBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  hamburgerBtn.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
-
-document.addEventListener('click', (e) => {
-  if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-    hamburgerBtn.classList.remove('active');
-    navMenu.classList.remove('active');
-  }
-});
-
-toggleDark.addEventListener('change', () => {
-  document.body.classList.toggle('dark', toggleDark.checked);
-});
-</script>
 
  <!-- Codigo Auto Type -->
 
@@ -333,25 +320,5 @@ toggleDark.addEventListener('change', () => {
 </script>
 <!-- Codigo Auto Type -->
 
-<!-- Codigo Modal Seção 4 -->
-<script>
-function abrirAba(id) {
-  const abas = document.querySelectorAll('.conteudo-aba');
-  abas.forEach(aba => aba.style.display = 'none');
-  document.getElementById(id).style.display = 'block';
-}
-
-function ampliarImagem(img) {
-  const overlay = document.getElementById("overlayImagem");
-  const imgAmpliada = document.getElementById("imagemAmpliada");
-  imgAmpliada.src = img.src;
-  overlay.style.display = "flex";
-}
-
-function fecharImagemAmpliada() {
-  document.getElementById("overlayImagem").style.display = "none";
-}
-</script>
-<!-- Codigo Modal Seção 4 -->
 </body>
 </html>
