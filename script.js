@@ -53,7 +53,7 @@ const descricoes = [
   "Curso feito pela Cisco sobre Hardware de computador e seus fundamentos,desenvolvi habilidades sobre:\n ⚪ Montagem de computadores, seus riscos e suas soluções",
   "Curso feito pela Cisco sobre Ciencias de dados, desenvolvi habilidades sobre:\n ⚪ gestão de dados e seus conceitos.",
   "Curso feito pela Cisco sobre a Defesa de Rede pelo Packet Tracer, desenvolvi habilidades sobre:\n ⚪ gerenciamento de operações de Ciber-Segurança \n ⚪ Virtualização e computação em Nuvem \n ⚪ Criptografia..." ,
-  "⚪ Completei o treinamento de monitor na 10° edição do Code Club (Raspberry Co.)\n ⚪ Fui voluntário para ensinar crianças carentes a usar estruturas de códigos (Code Club 11°)",
+  "⚪ Completei o treinamento de monitor na 10° edição do Code Club (Raspberry Co.)\n ⚪ Fui voluntário para ensinar crianças carentes a usar estruturas de códigos (Code Club 10°)",
   "⚪ Tenho conhecimento em desing grafico, sei manipular imagens digitais e vetorizar-las"
 ];
 
@@ -171,4 +171,5 @@ function ampliarImagem(img) {
 function fecharImagemAmpliada() {
   document.getElementById("overlayImagem").style.display = "none";
 }
+
   /*  Codigo Modal Seção 4 */
